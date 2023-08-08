@@ -18,8 +18,6 @@ sudo apt install hstr
 echo "install autojump"
 sudo apt install autojump
 
-
-
 # Starship
 # ------------------------------------------------------------------
 
@@ -29,7 +27,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.z
 mv FiraCode.zip /tmp
 unzip /tmp/FiraCode.zip -d /tmp/FiraCode
 mkdir ~/.fonts -p
-mv /tmp/FiraCode*.ttf ~/.fonts
+mv /tmp/FiraCode/*.ttf ~/.fonts
 
 echo "installling starship"
 curl -s https://starship.rs/install.sh | sh
