@@ -25,7 +25,7 @@ sudo apt install autojump
 echo "installling nerd-font"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
 mv FiraCode.zip /tmp
-unzip /tmp/FiraCode.zipunzip /tmp/FiraCode.zip -d /tmp/FiraCode
+unzip /tmp/FiraCode.zip -d /tmp/FiraCode
 mkdir ~/.fonts -p
 mv /tmp/FiraCode*.ttf ~/.fonts
 
