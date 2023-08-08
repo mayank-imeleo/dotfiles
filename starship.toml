@@ -1,0 +1,14 @@
+[nodejs]
+version_format = 'node v${raw}'
+
+[python]
+# disabled = true
+pyenv_version_name = false
+detect_folders = ['venv']
+
+[time]
+disabled = false
+use_12hr = true
+
+[sudo]
+disabled = false
