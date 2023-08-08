@@ -4,6 +4,8 @@
 # link .bashrc_server
 ln -sf $PWD/.bashrc_server ~/.bashrc_server
 
+echo "install autojump"
+sudo apt install autojump
 
 # Starship
 # ------------------------------------------------------------------
