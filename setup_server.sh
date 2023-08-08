@@ -5,7 +5,8 @@
 ln -sf $PWD/.bashrc_server ~/.bashrc_server
 
 
-# link starship.toml
+# starship
+curl -sS https://starship.rs/install.sh | sh
 ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 echo "source ~/.bashrc_server" >> ~/.bashrc
