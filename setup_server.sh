@@ -30,5 +30,5 @@ ln -sf $PWD/starship.toml ~/.config/starship.toml
 # ------------------------------------------------------------------
 
 
-echo "source ~/.bashrc_server" >> ~/.bashrc
+# echo "source ~/.bashrc_server" >> ~/.bashrc
 source ~/.bashrc
