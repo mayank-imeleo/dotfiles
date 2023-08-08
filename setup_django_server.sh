@@ -14,3 +14,4 @@ pip3 install virtualenv
 echo "installing postgres"
 sudo apt install postgresql postgresql-contrib
 sudo systemctl start postgresql.service
+# sudo -u postgres psql
