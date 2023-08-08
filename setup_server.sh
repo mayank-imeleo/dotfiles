@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+set -eu
 
 # link .bashrc_server
 ln -sf $PWD/.bashrc_server ~/.bashrc_server
