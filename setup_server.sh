@@ -5,8 +5,18 @@ set -eu
 # link .bashrc_server
 ln -sf $PWD/.bashrc_server ~/.bashrc_server
 
+# hstr
+# ------------------------------------------------------------------
+echo "install hstr"
+sudo apt install hstr
+
+# autojump
+# ------------------------------------------------------------------
+
 echo "install autojump"
 sudo apt install autojump
+
+
 
 # Starship
 # ------------------------------------------------------------------
