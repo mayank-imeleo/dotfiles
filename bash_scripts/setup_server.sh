@@ -5,7 +5,7 @@ set -eu
 sudo apt install unzip
 
 # link .bashrc_server
-ln -sf $PWD/.bashrc_server.sh ~/
+ln -sf $PWD/config_files/.bashrc_server.sh ~/
 
 # copy bin scrips
 echo "copy local bin scripts"
