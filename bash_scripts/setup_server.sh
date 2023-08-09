@@ -9,7 +9,7 @@ ln -sf $PWD/.bashrc_server.sh ~/
 
 # copy bin scrips
 echo "copy local bin scripts"
-cp bin/* ~/.local/bin/ -euv
+cp bin/* ~/.local/bin/ -ruv
 
 
 # hstr
