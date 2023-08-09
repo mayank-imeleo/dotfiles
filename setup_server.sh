@@ -7,11 +7,8 @@ sudo apt install unzip
 # link .bashrc_server
 ln -sf $PWD/config_files/.bashrc_server.sh ~/
 
-# copy bin scrips
-#echo "copy local bin scripts"
-#cp ./bin/local/* ~/.local/bin/ -ruv
-echo "copy global bin scripts"
-sudo cp ./bin/global/* /usr/local/bin/ -ruv
+# install binaries
+./install_bin.sh
 
 # direnv
 # ------------------------------------------------------------------
