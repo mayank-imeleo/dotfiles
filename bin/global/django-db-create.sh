@@ -8,7 +8,7 @@ DATABASE=$1
 USER=$1
 PASSWORD=$1
 
-psql <<EOF
+sudo -u postgres psql <<EOF
 drop database if exists $DATABASE;
 create database $DATABASE;
 create user $USER with login password '$PASSWORD';
