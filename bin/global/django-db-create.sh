@@ -12,6 +12,10 @@ psql <<EOF
 drop database if exists $DATABASE;
 create database $DATABASE;
 create user $USER with login password '$PASSWORD';
+
 grant all on database $DATABASE to $USER;
 alter database $DATABASE owner to $USER;
+
+\c $DATABASE
+GRANT ALL ON ALL TABLES IN SCHEMA public TO mooving_django_oms;
 EOF
