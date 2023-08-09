@@ -11,7 +11,7 @@ ln -sf $PWD/config_files/.bashrc_server.sh ~/
 #echo "copy local bin scripts"
 #cp ./bin/local/* ~/.local/bin/ -ruv
 echo "copy global bin scripts"
-sudo cp ./bin/root/* /usr/local/bin/ -ruv
+sudo cp ./bin/global/* /usr/local/bin/ -ruv
 
 
 
