@@ -3,6 +3,7 @@
 set -eu
 
 sudo cp bin/create-django-db.sh /usr/local/bin/
+sudo cp bin/create-django-db.sh /usr/local/bin/
 
 echo "instaling python3.11"
 sudo add-apt-repository ppa:deadsnakes/ppa
