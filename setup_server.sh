@@ -13,7 +13,10 @@ ln -sf $PWD/config_files/.bashrc_server.sh ~/
 echo "copy global bin scripts"
 sudo cp ./bin/global/* /usr/local/bin/ -ruv
 
+# direnv
+# ------------------------------------------------------------------
 
+sudo apt install direnv
 
 # hstr
 # ------------------------------------------------------------------
