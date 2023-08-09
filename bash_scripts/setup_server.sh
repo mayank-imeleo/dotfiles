@@ -5,7 +5,12 @@ set -eu
 sudo apt install unzip
 
 # link .bashrc_server
-ln -sf $PWD/.bashrc_server ~/.bashrc_server
+ln -sf $PWD/.bashrc_server.sh ~/
+
+# copy bin scrips
+echo "copy local bin scripts"
+cp bin/* ~/.local/bin/ -euv
+
 
 # hstr
 # ------------------------------------------------------------------
@@ -42,4 +47,4 @@ ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 
 # echo "source ~/.bashrc_server" >> ~/.bashrc
-source ~/.bashrc
+#source ~/.bashrc

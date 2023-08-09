@@ -68,8 +68,6 @@ alias p="python"
 alias va="source venv/bin/activate"
 alias da="deactivate"
 
-echo "copy local bin scripts"
-cp .local/bin/* ~/.local/bin/
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
