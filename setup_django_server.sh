@@ -2,9 +2,12 @@
 
 set -eu
 
-echo "instaling python3.11"
+
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
+echo "installing python3.10"
+sudo apt-get install python3.10
+echo "installing python3.11"
 sudo apt-get install python3.11
 
 echo "installing virtualenv"
