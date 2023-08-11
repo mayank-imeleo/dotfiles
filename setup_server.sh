@@ -7,7 +7,7 @@ mkdir -p "$HOME"/.config
 # basic utilities
 # ------------------------------------------------------------------
 
-sudo apt install unzip glances
+sudo apt install unzip glances nginx hstr autojump
 
 
 # custom binaries
@@ -18,16 +18,6 @@ echo "Installing custom binaries"
 ./install_bin.sh
 
 
-# hstr
-# ------------------------------------------------------------------
-echo "install hstr"
-sudo apt install hstr
-
-# autojump
-# ------------------------------------------------------------------
-
-echo "install autojump"
-sudo apt install autojump
 
 # Starship
 # ------------------------------------------------------------------
