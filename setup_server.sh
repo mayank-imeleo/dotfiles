@@ -2,18 +2,21 @@
 
 set -eu
 
+sudo apt update
+
+# basic utilities
+# ------------------------------------------------------------------
+
 sudo apt install unzip
 
-# link .bashrc_server
-ln -sf $PWD/config_files/.bashrc_server.sh ~/
 
+# custom binaries
+# ------------------------------------------------------------------
+
+echo "Installing custom binaries"
 # install binaries
 ./install_bin.sh
 
-# direnv
-# ------------------------------------------------------------------
-
-sudo apt install direnv
 
 # hstr
 # ------------------------------------------------------------------
@@ -41,13 +44,15 @@ echo "installling starship"
 curl -s https://starship.rs/install.sh | sh
 
 # setup starship config
+ln -sf $PWD/config_files/starship.toml ~/.config/starship.toml
 
-ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 
 # bashrc
 # ------------------------------------------------------------------
 
+# link .bashrc_server
+ln -sf $PWD/config_files/.bashrc_server.sh ~/
 
 # echo "source ~/.bashrc_server" >> ~/.bashrc
 #source ~/.bashrc
