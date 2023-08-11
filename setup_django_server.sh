@@ -8,8 +8,13 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
 echo "installing python3.10"
 sudo apt-get install python3.10
+sudo apt-get install python3.10-dev
+
 echo "installing python3.11"
 sudo apt-get install python3.11
+sudo apt-get install python3.11-dev
+
+sudo apt-get install libpq-dev
 
 echo "Installing pip"
 sudo apt install python3-pip
