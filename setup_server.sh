@@ -44,7 +44,7 @@ echo "installling starship"
 curl -s https://starship.rs/install.sh | sh
 
 # setup starship config
-ln -sf $PWD/config_files/starship.toml ~/.config/starship.toml
+ln -sf $PWD/config/starship.toml ~/.config/starship.toml
 
 
 
@@ -52,7 +52,7 @@ ln -sf $PWD/config_files/starship.toml ~/.config/starship.toml
 # ------------------------------------------------------------------
 
 # link .bashrc_server
-ln -sf $PWD/config_files/.bashrc_server.sh ~/
+ln -sf $PWD/config/.bashrc_server.sh ~/
 
 # echo "source ~/.bashrc_server" >> ~/.bashrc
 #source ~/.bashrc
