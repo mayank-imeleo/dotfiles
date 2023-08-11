@@ -15,6 +15,9 @@ echo "Installing pip"
 sudo apt install python3-pip
 sudo pip install --upgrade pip
 
+echo "Installing virtualenv"
+pip3 install virtualenv
+
 echo "Installing nginx"
 sudo apt-get install nginx
 
