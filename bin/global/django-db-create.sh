@@ -16,6 +16,6 @@ create user $USER with login password '$PASSWORD';
 grant all on database $DATABASE to $USER;
 alter database $DATABASE owner to $USER;
 
-\c $DATABASE
-GRANT ALL ON ALL TABLES IN SCHEMA public TO mooving_django_oms;
+#\c $DATABASE
+#GRANT ALL ON ALL TABLES IN SCHEMA public TO $USER;
 EOF
