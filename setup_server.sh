@@ -3,7 +3,7 @@
 set -eu
 
 sudo apt update
-
+mkdir -p "$HOME"/.config
 # basic utilities
 # ------------------------------------------------------------------
 
@@ -44,7 +44,7 @@ echo "installling starship"
 curl -s https://starship.rs/install.sh | sh
 
 # setup starship config
-ln -sf $PWD/config/starship.toml ~/.config/starship.toml
+ln -sf $PWD/config/starship.toml ~/.config/
 
 
 
