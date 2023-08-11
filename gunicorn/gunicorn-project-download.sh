@@ -2,7 +2,7 @@
 
 set -eu
 
-#source .env
+source .env
 
 echo "Downloading git repo"
 rm  /tmp/gunicorn-project -rf
