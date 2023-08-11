@@ -53,6 +53,7 @@ alias t=tail
 alias t=touch
 alias w=which
 alias x=exit
+alias s=sudo
 
 alias less="less -R" 			# always display colors
 alias tree="tree -C"			# always display colors
