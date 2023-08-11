@@ -11,7 +11,7 @@ PASSWORD=$1
 sudo -u postgres psql <<EOF
 drop database if exists $DATABASE;
 create database $DATABASE;
-create user $USER with login password '$PASSWORD';
+create user $USER with superuser login password '$PASSWORD';
 
 grant all on database $DATABASE to $USER;
 alter database $DATABASE owner to $USER;
