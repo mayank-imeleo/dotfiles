@@ -7,7 +7,7 @@ sudo apt update
 # basic utilities
 # ------------------------------------------------------------------
 
-sudo apt install unzip
+sudo apt install unzip glances
 
 
 # custom binaries
