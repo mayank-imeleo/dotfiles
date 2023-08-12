@@ -62,7 +62,7 @@ alias tree="tree -C"			# always display colors
 alias bashrc_reload="source ~/.bashrc"
 alias rl=reload_bashrc
 alias bashrc_edit="vim ~/.bashrc"
-alias ed=edit_bashrc
+#alias ed=edit_bashrc
 
 # open a random file in vim
 alias tvim="mktemp | vim -"
