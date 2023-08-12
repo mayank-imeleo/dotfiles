@@ -57,8 +57,12 @@ alias s=sudo
 
 alias less="less -R" 			# always display colors
 alias tree="tree -C"			# always display colors
-alias reload_bashrc="source ~/.bashrc"
+
+# bashrc
+alias bashrc_reload="source ~/.bashrc"
 alias rl=reload_bashrc
+alias bashrc_edit="vim ~/.bashrc"
+alias ed=edit_bashrc
 
 # open a random file in vim
 alias tvim="mktemp | vim -"
