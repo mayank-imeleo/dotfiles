@@ -60,7 +60,7 @@ alias tree="tree -C"			# always display colors
 
 # bashrc
 alias bashrc_reload="source ~/.bashrc"
-alias rl=reload_bashrc
+alias rl=bashrc_reload
 alias bashrc_edit="vim ~/.bashrc"
 #alias ed=edit_bashrc
 
