@@ -1,3 +1,6 @@
+
+# https://starship.rs/config/
+
 [nodejs]
 version_format = 'node v${raw}'
 
@@ -12,3 +15,14 @@ use_12hr = true
 
 [sudo]
 disabled = false
+
+
+[env_var.SERVER_NAME]
+default = ''
+style = 'bold italic underline yellow'
+format = "| [$env_value]($style) "
+
+[env_var.APP_ALIAS]
+default = ''
+style = 'blue'
+format = "for [$env_value]($style) "

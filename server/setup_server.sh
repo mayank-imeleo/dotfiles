@@ -33,16 +33,12 @@ mv /tmp/FiraCode/*.ttf ~/.fonts
 echo "installling starship"
 curl -s https://starship.rs/install.sh | sh
 
-# setup starship config
-ln -sf $PWD/config/starship.toml ~/.config/
 
 
 
 # bashrc
 # ------------------------------------------------------------------
 
-# link .bashrc_server
-ln -sf $PWD/config/.bashrc_server.sh ~/
 
 # echo "source ~/.bashrc_server" >> ~/.bashrc
 #source ~/.bashrc
