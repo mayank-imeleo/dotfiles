@@ -19,10 +19,10 @@ disabled = false
 
 [env_var.SERVER_NAME]
 default = ''
-style = 'bold italic underline yellow'
+style = 'bold underline yellow'
 format = "| [$env_value]($style) "
 
 [env_var.APP_ALIAS]
 default = ''
 style = 'blue'
-format = "for [$env_value]($style) "
+format = "for [$env_value]($style) |"
