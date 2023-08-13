@@ -12,4 +12,6 @@ pip install -r requirements/local.txt
 
 ./manage.py migrate
 
+./manage.py collectstatic
+
 sudo systemctl restart gunicorn.service
