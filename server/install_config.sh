@@ -13,3 +13,6 @@ cp "$PWD"/config/.bashrc_server.sh ~/ -v
 
 echo "source ~/.bashrc"
 source "$HOME"/.bashrc
+
+
+echo "Successfully install configuration files for server environment"
