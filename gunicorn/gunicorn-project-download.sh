@@ -6,7 +6,7 @@ source .env
 
 echo "Downloading git repo"
 rm  /tmp/gunicorn-project -rf
-git clone "$GIT_REPO_SSH_URL" /tmp/gunicorn-project
+git clone "$APP_GIT_REPO_SSH_URL" /tmp/gunicorn-project
 
 echo "Copying git git repo to /var/www/html"
 sudo mkdir /var/www/html -p
