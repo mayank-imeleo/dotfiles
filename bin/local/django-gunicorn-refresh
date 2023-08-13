@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -eu
+
+git pull
+
+source venv/bin/activate
+
+pip install -r requirements/local.txt
+
+./manage.py check
+
+./manage.py migrate
+
+sudo systemctl restart gunicorn.service
