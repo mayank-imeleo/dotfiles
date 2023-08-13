@@ -2,11 +2,14 @@
 
 set -eu
 
-echo "Installing starship.toml"
-ln -sf "$PWD"/config/starship.toml ~/.config/
+echo "Copying starship.toml"
+cp  "$PWD"/config/starship.toml ~/.config/ -v
 
-echo "Installing .bashrc_servers.sh"
-ln -sf "$PWD"/config/.bashrc_server.sh ~/
+#echo "Copying .env to $HOME/.env"
+#cp "$PWD"/config/.env "$HOME"/.env
+
+echo "Copying .bashrc_servers.sh"
+cp "$PWD"/config/.bashrc_server.sh ~/ -v
 
 echo "source ~/.bashrc"
 source "$HOME"/.bashrc

@@ -4,5 +4,8 @@ set -eu
 
 ./server/install_config.sh
 
-echo "Installing .bashrc_desktop.sh"
-ln -sf "$PWD"/config/.bashrc_desktop.sh ~/
+echo "Copying .bashrc_desktop.sh"
+cp  "$PWD"/config/.bashrc_desktop.sh ~/ -v
+
+echo "source ~/.bashrc"
+source "$HOME"/.bashrc
