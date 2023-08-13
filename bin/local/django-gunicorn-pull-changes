@@ -21,4 +21,4 @@ echo "manage.py collectstatic"
 ./manage.py collectstatic
 
 echo "django-gunicorn-reload"
-django-gunicorn-reload
+django-gunicorn-restart
