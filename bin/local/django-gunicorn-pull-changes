@@ -2,16 +2,23 @@
 
 set -eu
 
+echo "Pulling changes"
 git pull
 
+echo "Activate virtual environment"
 source venv/bin/activate
 
+echo "Install local requirements"
 pip install -r requirements/local.txt
 
+echo "manage.py check"
 ./manage.py check
 
+echo "manage.py migrate"
 ./manage.py migrate
 
+echo "manage.py collectstatic"
 ./manage.py collectstatic
 
-sudo systemctl restart gunicorn.service
+echo "django-gunicorn-reload"
+django-gunicorn-reload
