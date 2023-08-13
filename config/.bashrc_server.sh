@@ -2,8 +2,6 @@
 
 # TERMINAL ----------------------------------------------------------
 
-source .env
-
 #ls
 alias l='ls -CF'
 alias ll='ls -alF'
