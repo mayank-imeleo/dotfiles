@@ -59,7 +59,7 @@ export REQUEST_CA_BUNDLE='/home/mayank/.ssl/certs.pem'
 . /home/mayank/projects/my-scripts-tools/bash-linux/bash-wakatime/bash-wakatime.sh
 
 if [ -d "$HOME/.local/share/JetBrains/Toolbox/scripts" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+    PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
 fi
 
 

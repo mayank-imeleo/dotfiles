@@ -7,7 +7,7 @@ mkdir -p "$HOME"/.config
 # basic utilities
 # ------------------------------------------------------------------
 
-sudo apt install unzip glances hstr autojump
+sudo apt install unzip glances hstr autojump figlet
 
 
 # custom binaries
