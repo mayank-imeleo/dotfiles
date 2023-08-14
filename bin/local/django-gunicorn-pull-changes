@@ -18,7 +18,7 @@ echo "manage.py migrate"
 ./manage.py migrate
 
 echo "manage.py collectstatic"
-./manage.py collectstatic
+./manage.py collectstatic --no-input
 
 echo "django-gunicorn-reload"
 django-gunicorn-restart
