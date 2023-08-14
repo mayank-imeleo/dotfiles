@@ -8,8 +8,8 @@ git pull
 echo "Activate virtual environment"
 source venv/bin/activate
 
-echo "Install local requirements"
-pip install -r requirements/local.txt
+echo "Install production requirements"
+pip install -r requirements/production.txt
 
 echo "manage.py check"
 ./manage.py check
