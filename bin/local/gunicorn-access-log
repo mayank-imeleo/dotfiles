@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo tail /var/log/gunicorn/access.log -f
