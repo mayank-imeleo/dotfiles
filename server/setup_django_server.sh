@@ -41,3 +41,5 @@ sudo apt install postgis postgresql postgresql-contrib
 sudo systemctl start postgresql.service
 # sudo -u postgres psql
 
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash

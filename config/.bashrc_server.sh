@@ -73,9 +73,9 @@ alias da="deactivate"
 
 # GENERAL
 export APP_GIT_REPO_SSH_URL=""
-export APP_ALIAS="General-App"
+export APP_ALIAS="General-Dev"
 
-export SERVER_NAME="Demo-Env"
+export SERVER_NAME="Local-Ubuntu-Env"
 
 # POSTGRES
 
