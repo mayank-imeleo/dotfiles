@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Clone a git repo to <githost>__<username>__<reponame> dir
+
+set -e
+set -u
+
+GIT_URL=$1
+REPO_DIR_NAME=$(echo "$GIT_URL" | sed -r 's/^https:\/\/([a-z]*).com\/([a-z\-]+)\/([a-z\-]+).git$/\1__\2__\3/')
+
+git clone "$GIT_URL" "$REPO_DIR_NAME"
