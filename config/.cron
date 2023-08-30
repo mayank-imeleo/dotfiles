@@ -1,0 +1,6 @@
+ 
+# Every 1 hr, delete from ~/Downloads, content that is older than 2 days
+0 */1 * * * find ~/Downloads/* -mtime +2 -exec rm -rf "{}" \;
+
+#activiy watch
+#@reboot /home/mayank/projects/my-scripts-tools/bash-linux/activitywatch/releases/v012/activitywatch/aw-qt
