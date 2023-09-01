@@ -6,6 +6,9 @@ set -e
 set -u
 
 GIT_URL=$1
-REPO_DIR_NAME=$(echo "$GIT_URL" | sed -r 's/^https:\/\/([a-z]*).com\/([a-z\-]+)\/([a-z\-]+).git$/\1__\2__\3/')
+REPO_DIR_NAME=$(echo "$GIT_URL" | sed -r 's/^https:\/\/([a-z]*).com\/([a-z\-_]+)\/([a-z\-_]+).git$/\1__\2__\3/')
 
-git clone "$GIT_URL" "$REPO_DIR_NAME"
+cmd="git clone $GIT_URL $REPO_DIR_NAME"
+
+echo $cmd
+$cmd
