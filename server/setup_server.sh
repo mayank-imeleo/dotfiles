@@ -15,7 +15,7 @@ sudo apt install unzip glances hstr autojump figlet nnn -y
 
 echo "Installing custom binaries"
 # install binaries
-./install_bin.sh
+./server/install_bin.sh
 
 
 
