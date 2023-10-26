@@ -7,7 +7,8 @@ mkdir -p "$HOME"/.config
 # basic utilities
 # ------------------------------------------------------------------
 
-sudo apt install unzip glances hstr autojump figlet nnn -y
+sudo apt install \
+  unzip glances hstr autojump figlet nnn net-tools -y
 
 
 # custom binaries
