@@ -8,7 +8,8 @@ mkdir -p "$HOME"/.config
 # ------------------------------------------------------------------
 
 sudo apt install \
-  unzip glances hstr autojump figlet nnn net-tools -y
+  unzip glances hstr autojump figlet nnn net-tools \
+  multitail -y
 
 
 # custom binaries
