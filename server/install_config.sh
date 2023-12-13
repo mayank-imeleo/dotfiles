@@ -12,7 +12,7 @@ echo "Copying .bashrc_servers.sh"
 cp "$PWD"/config/.bashrc_server.sh ~/ -v
 
 cat <<EOF >> ~/.bashrc
-source ~/.bashrc_server.sh
+source "$HOME"/.bashrc_server.sh
 EOF
 
 echo "source ~/.bashrc"
