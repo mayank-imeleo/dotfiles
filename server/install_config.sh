@@ -11,6 +11,10 @@ cp  "$PWD"/config/starship.toml ~/.config/ -v
 echo "Copying .bashrc_servers.sh"
 cp "$PWD"/config/.bashrc_server.sh ~/ -v
 
+cat <<EOF >> ~/.bashrc
+source ~/.bashrc_server.sh
+EOF
+
 echo "source ~/.bashrc"
 source "$HOME"/.bashrc
 
