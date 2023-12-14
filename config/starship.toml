@@ -23,6 +23,7 @@ style = 'bold underline yellow'
 format = "| [$env_value]($style) "
 
 [env_var.APP_ALIAS]
+disabled = true
 default = ''
 style = 'blue'
 format = "for [$env_value]($style) | "
