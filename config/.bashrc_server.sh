@@ -16,10 +16,11 @@ export GIT_EDITOR=vim
 
 #HSTR
 alias hh=hstr
-export HSTR_CONFIG=hicolor,no-confirm
+# store b~/.hstr_blacklist
+export HSTR_CONFIG=hicolor,no-confirm,blacklist
 shopt -s histappend             # append new history items to .bash_history
 export HISTCONTROL=ignorespace  # leading space hides commands from history
-export HISTFILESIZE=-1          # increase history file size (default is 500)
+export HISTFILESIZE=10000       # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE} # increase history size (default is 500)
 # ensure synchronization between bash memory and history file
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
