@@ -2,7 +2,9 @@
 
 set -eu
 
-cd $GUNICORN_PROJECT_DIR
+# https://docs.gunicorn.org/en/stable/settings.html
+
+GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 
 /home/ubuntu/gunicorn-project/venv/bin/gunicorn \
   --access-logfile /var/log/gunicorn/access.log \
@@ -11,4 +13,5 @@ cd $GUNICORN_PROJECT_DIR
   --workers 4 \
   --bind unix:/tmp/gunicorn.sock \
   --timeout 75 \
+  --chdir "$GUNICORN_PROJECT_DIR" \
   config.wsgi:application
