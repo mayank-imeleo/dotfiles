@@ -64,6 +64,14 @@ alias bashrc_edit="vim ~/.bashrc"
 # open a random file in vim
 alias tvim="mktemp | vim -"
 
+# ------------------------------------------------------------------
+# GIT
+
+# run gl --all to view graph of all branches
+alias gl="git log --oneline --graph --decorate"
+
+alias gs="git status"
+
 # PYTHON ------------------------------------------------------------
 
 alias p="python"
