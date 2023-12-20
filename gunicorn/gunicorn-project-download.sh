@@ -2,18 +2,13 @@
 
 set -eu
 
+# Download the gunicorn project repo
 
+PROJECT_DIR=/home/ubuntu/gunicorn-project
 echo "Downloading git repo"
-rm  /tmp/gunicorn-project -rf
-git clone "$APP_GIT_REPO_SSH_URL" /tmp/gunicorn-project
-
-echo "Copying git git repo to /var/www/html"
-sudo mkdir /var/www/html -p
-sudo mv /tmp/gunicorn-project /var/www/html
-
-cd /var/www/html/gunicorn-project
+rm  $PROJECT_DIR -rf
+git clone "$APP_GIT_REPO_SSH_URL" $PROJECT_DIR
+cd $PROJECT_DIR
 ls
 
-#
-#cd gunicorn
-#ls
+
