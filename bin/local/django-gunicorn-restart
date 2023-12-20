@@ -4,7 +4,8 @@ set -eu
 
 sudo systemctl daemon-reload
 
-echo "Start system services"
+echo "Restart gunicorn related system services"
 sudo systemctl restart gunicorn.socket
 sudo systemctl restart gunicorn.service
+sudo systemctl restart postgresql.service
 sudo systemctl restart nginx.service
