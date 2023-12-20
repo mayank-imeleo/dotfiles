@@ -92,6 +92,11 @@ export APP_ALIAS="General-Dev"
 
 export SERVER_NAME="Local-Ubuntu-Env"
 
+# ------------------------------------------------------------------
+# GIT
+export GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
+
+# ------------------------------------------------------------------
 # POSTGRES
 
 export PG_VERSION="12"

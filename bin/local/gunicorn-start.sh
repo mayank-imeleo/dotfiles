@@ -2,6 +2,8 @@
 
 set -eu
 
+cd $GUINICORN_PROJECT_DIR
+
 /home/ubuntu/gunicorn-project/venv/bin/gunicorn \
   --access-logfile /var/log/gunicorn/access.log \
   --error-logfile /var/log/gunicorn/error.log \
