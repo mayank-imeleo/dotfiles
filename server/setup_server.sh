@@ -9,6 +9,7 @@ mkdir -p "$HOME"/.config
 
 sudo apt install \
   unzip glances hstr autojump figlet nnn net-tools \
+  lolcat \
   multitail -y
 
 

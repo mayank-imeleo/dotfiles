@@ -33,10 +33,16 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 source /usr/share/autojump/autojump.sh
 alias jl="j --s | fzf"
 
+# ------------------------------------------------------------------
 # Starship
+function banner(){
+    figlet "WELCOME"|lolcat
+}
+starship_precmd_user_func="banner"
 eval "$(starship init bash)"
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 
+# ------------------------------------------------------------------
 #ssh
 alias ssh-config="vim ~/.ssh/config"
 alias sc="ssh-config"
