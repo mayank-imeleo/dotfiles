@@ -6,6 +6,8 @@ set -eu
 
 GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 
+#  --bind unix:/tmp/gunicorn.sock \
+
 /home/ubuntu/gunicorn-project/venv/bin/gunicorn \
   --user ubuntu \
   --group www-data \
@@ -13,7 +15,7 @@ GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
   --error-logfile /var/log/gunicorn/error.log \
   --log-level debug \
   --workers 4 \
-  --bind unix:/tmp/gunicorn.sock \
+  --bind 127.0.0.1:8080 \
   --timeout 75 \
   --chdir "$GUNICORN_PROJECT_DIR" \
   config.wsgi:application
