@@ -2,7 +2,6 @@
 
 set -eu
 
-# reload updated systemd services
 sudo systemctl daemon-reload
 
 echo "Restart gunicorn related system services"
