@@ -44,4 +44,6 @@ django-gunicorn-restart
 
 #crontab server/cron
 
+nginx -t
+
 echo "Server setup complete"
