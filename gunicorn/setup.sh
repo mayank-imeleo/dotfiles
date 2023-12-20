@@ -45,6 +45,6 @@ django-gunicorn-restart
 #crontab server/cron
 
 echo "Checking nginx configuration"
-nginx -t
+sudo nginx -t
 
 echo "Server setup complete"
