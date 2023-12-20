@@ -2,6 +2,9 @@
 
 set -eu
 
+GUNICORN_PROJECT_DIR=/home/ubuntu/gunicorn-project
+cd "$GUNICORN_PROJECT_DIR"
+
 source .env
 
 virtualenv venv -p "$PYTHON_EXECUTABLE" --clear
