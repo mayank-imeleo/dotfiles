@@ -14,7 +14,16 @@ sudo mkdir -p /var/log/gunicorn/
 sudo touch /var/log/gunicorn/access.log
 sudo touch /var/log/gunicorn/error.log
 
+sudo chown ubuntu:www-data /var/log/gunicorn
 sudo chown ubuntu:www-data /var/log/gunicorn/*.log -R
+
+echo "Setting Up nginx log files"
+sudo mkdir -p /var/log/nginx/
+sudo touch /var/log/nginx/access.log
+sudo touch /var/log/nginx/error.log
+
+sudo chown ubuntu:www-data /var/log/nginx
+sudo chown ubuntu:www-data /var/log/nginx/*.log -R
 
 
 echo "Configuring nginx"
