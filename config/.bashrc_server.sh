@@ -93,7 +93,7 @@ export APP_ALIAS="General-Dev"
 export SERVER_NAME="Local-Ubuntu-Env"
 
 # ------------------------------------------------------------------
-# GIT
+# GUNICORN
 export GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 
 # ------------------------------------------------------------------
