@@ -7,7 +7,7 @@ set -eu
 # $ export GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 # $ ./gunicorn/setup.sh
 
-GUNICORN_PROJECT_DIR=${GUNICORN_PROJECT_DIR:-/home/ubuntu/gunicorn-project}
+
 
 echo "Setting Up gunicorn log files"
 sudo mkdir -p /var/log/gunicorn/
@@ -28,11 +28,11 @@ sudo chown ubuntu:www-data /var/log/nginx/*.log -R
 
 echo "Configuring nginx"
 sudo rm /etc/nginx/sites-enabled/default -f
-sudo cp "$GUNICORN_PROJECT_DIR"/server/gunicorn.nginx /etc/nginx/sites-enabled/
+sudo cp "$PWD"/gunicorn/gunicorn.nginx /etc/nginx/sites-enabled/
 
 echo "Configuring system daemons"
-sudo cp "$GUNICORN_PROJECT_DIR"/server/gunicorn.socket /etc/systemd/system/
-sudo cp "$GUNICORN_PROJECT_DIR"/server/gunicorn.service /etc/systemd/system/
+sudo cp "$PWD"/gunicorn/gunicorn.socket /etc/systemd/system/
+sudo cp "$PWD"/gunicorn/gunicorn.service /etc/systemd/system/
 
 echo "Enable system services"
 
