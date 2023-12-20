@@ -2,7 +2,7 @@
 
 set -eu
 
-cd $GUINICORN_PROJECT_DIR
+cd $GUNICORN_PROJECT_DIR
 
 /home/ubuntu/gunicorn-project/venv/bin/gunicorn \
   --access-logfile /var/log/gunicorn/access.log \
