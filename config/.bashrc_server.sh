@@ -96,6 +96,12 @@ export SERVER_NAME="Local-Ubuntu-Env"
 # GUNICORN
 export GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 
+
+# ------------------------------------------------------------------
+# NGINX
+# change this to your domain name. Eg: abc.com
+export NGINX_SERVER_NAME="localhost"
+
 # ------------------------------------------------------------------
 # POSTGRES
 
