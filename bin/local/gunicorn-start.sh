@@ -7,6 +7,8 @@ set -eu
 GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 
 /home/ubuntu/gunicorn-project/venv/bin/gunicorn \
+  --user ubuntu \
+  --group www-data \
   --access-logfile /var/log/gunicorn/access.log \
   --error-logfile /var/log/gunicorn/error.log \
   --log-level debug \
