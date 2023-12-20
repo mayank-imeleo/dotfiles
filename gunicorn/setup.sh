@@ -40,7 +40,7 @@ sudo systemctl enable gunicorn.socket
 sudo systemctl enable gunicorn.service
 
 echo "Restarting system daemon services"
-server/restart.sh
+django-gunicorn-restart
 
 #crontab server/cron
 
