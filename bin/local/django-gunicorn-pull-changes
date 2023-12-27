@@ -2,6 +2,8 @@
 
 set -eu
 
+cd "$GUNICORN_PROJECT_DIR"
+
 echo "Pulling changes"
 git pull
 
