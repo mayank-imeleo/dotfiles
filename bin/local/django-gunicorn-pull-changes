@@ -8,6 +8,9 @@ git pull
 echo "Activate virtual environment"
 source venv/bin/activate
 
+echo "Force install pyutils"
+pip install git+ssh://git@gitlab.com/mayankm2089/pyutils.git --force-reinstall
+
 echo "Install production requirements"
 pip install -r requirements/production.txt
 
