@@ -14,6 +14,7 @@ sudo mkdir -p /var/log/gunicorn/
 sudo touch /var/log/gunicorn/access.log
 sudo touch /var/log/gunicorn/error.log
 
+sudo adduser ubuntu www-data
 sudo chown ubuntu:www-data /var/log/gunicorn
 sudo chown ubuntu:www-data /var/log/gunicorn/*.log -R
 

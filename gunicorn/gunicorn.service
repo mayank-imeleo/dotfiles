@@ -9,7 +9,7 @@ Group=www-data
 WorkingDirectory=/home/ubuntu/gunicorn-project/
 Restart=always
 EnvironmentFile=/home/ubuntu/gunicorn-project/.env
-ExecStart=/home/ubuntu/.local/bin/gunicorn-start.sh
+ExecStart=/home/ubuntu/.local/bin/gunicorn-start
 
 [Install]
 WantedBy=multi-user.target
