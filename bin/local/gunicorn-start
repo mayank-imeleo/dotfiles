@@ -6,14 +6,6 @@ set -eu
 
 GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 
-MODE="${1:-development}"
-if [ "$MODE" == "develpment" ]; then
-    SOCCKET="0.0.0.0:8000"
-else
-    SOCKET="unix:/tmp/gunicorn.sock"
-fi
-
-
 /home/ubuntu/gunicorn-project/venv/bin/gunicorn \
   --user ubuntu \
   --group www-data \
