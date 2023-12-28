@@ -3,6 +3,8 @@
 set -eu
 
 sudo adduser ubuntu www-data
+sudo adduser www-data ubuntu
+
 sudo chown ubuntu:www-data /run
 
 echo "Configuring system daemons"
