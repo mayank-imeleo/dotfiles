@@ -19,10 +19,11 @@ pip install -r "requirements/local.txt"
 pip install -r "requirements/production.txt"
 
 echo "setup django application"
-./manage.py check
+
 ./manage.py migrate
 ./manage.py cities_light
 ./manage.py collectstatic --no-input
+./manage.py check
 
 
 
