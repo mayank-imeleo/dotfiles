@@ -3,7 +3,7 @@ Description=gunicorn socket
 
 [Socket]
 SocketUser=www-data
-ListenStream=/tmp/gunicorn.sock
+ListenStream=/run/gunicorn.sock
 
 [Install]
 WantedBy=sockets.target
