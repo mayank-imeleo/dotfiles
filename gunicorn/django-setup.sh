@@ -7,6 +7,8 @@ cd "$GUNICORN_PROJECT_DIR"
 
 source .env
 
+django-db-create "$DATABASE_NAME"
+
 virtualenv venv -p "$PYTHON_EXECUTABLE" --clear
 
 source venv/bin/activate
