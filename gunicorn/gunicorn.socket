@@ -2,8 +2,7 @@
 Description=gunicorn socket
 
 [Socket]
-User=ubuntu
-Group=www-data
+SocketUser=www-data
 ListenStream=/tmp/gunicorn.sock
 
 [Install]
