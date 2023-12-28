@@ -3,6 +3,7 @@
 set -eu
 
 sudo adduser ubuntu www-data
+sudo chown ubuntu:www-data /run
 
 echo "Configuring system daemons"
 sudo cp "$PWD"/gunicorn/gunicorn.socket /etc/systemd/system/

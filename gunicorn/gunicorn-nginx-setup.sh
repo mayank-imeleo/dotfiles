@@ -2,12 +2,6 @@
 
 set -eu
 
-# Setup system services
-# Usage: ./server/setup.sh
-# $ export GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
-# $ ./gunicorn/setup.sh
-
-
 
 echo "Setting Up gunicorn log files"
 sudo mkdir -p /var/log/gunicorn/
@@ -31,7 +25,8 @@ echo "Configuring nginx"
 sudo rm /etc/nginx/sites-enabled/default -f
 sudo cp "$PWD"/gunicorn/gunicorn.nginx /etc/nginx/sites-enabled/
 
-
+echo "Configuring system daemons"
+"$PWD"/gunicorn/systemd-reload.sh
 
 echo "Restarting system daemon services"
 django-gunicorn-restart
