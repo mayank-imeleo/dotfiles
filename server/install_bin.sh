@@ -4,4 +4,4 @@ echo "Installing local binary utilities"
 
 mkdir ~/.local/bin -p
 
-cp bin/local/* "$HOME"/.local/bin/ -v
+cp bin/* "$HOME"/.local/bin/ -v
