@@ -6,6 +6,11 @@ set -eu
 sudo apt-get install \
   libpq-dev libgl1 \
   -y
+# certbot
+sudo snap install core; sudo snap refresh core
+sudo apt remove certbot
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
