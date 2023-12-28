@@ -2,7 +2,7 @@
 Description=gunicorn socket
 
 [Socket]
-SocketUser=ubuntu
+SocketUser=www-data
 SocketGroup=www-data
 ListenStream=/run/gunicorn.sock
 
