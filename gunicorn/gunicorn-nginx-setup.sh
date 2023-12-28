@@ -31,14 +31,7 @@ echo "Configuring nginx"
 sudo rm /etc/nginx/sites-enabled/default -f
 sudo cp "$PWD"/gunicorn/gunicorn.nginx /etc/nginx/sites-enabled/
 
-echo "Configuring system daemons"
-sudo cp "$PWD"/gunicorn/gunicorn.socket /etc/systemd/system/
-sudo cp "$PWD"/gunicorn/gunicorn.service /etc/systemd/system/
 
-echo "Enable system services"
-
-sudo systemctl enable gunicorn.socket
-sudo systemctl enable gunicorn.service
 
 echo "Restarting system daemon services"
 django-gunicorn-restart
