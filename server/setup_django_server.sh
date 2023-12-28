@@ -4,7 +4,7 @@ set -eu
 
 # Python Dependencies
 sudo apt-get install \
-  libpq-dev libgl \
+  libpq-dev libgl1 \
   -y
 
 sudo add-apt-repository ppa:deadsnakes/ppa
