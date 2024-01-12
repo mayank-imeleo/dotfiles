@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sey -eu
+set -eu
 
 source "$GUNICORN_PROJECT_DIR"/.env
 
