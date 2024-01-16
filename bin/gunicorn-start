@@ -14,6 +14,6 @@ GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
   --log-level debug \
   --workers 4 \
   --bind unix:/run/gunicorn.sock \
-  --timeout 75 \
+  --timeout 600 \
   --chdir "$GUNICORN_PROJECT_DIR" \
   config.wsgi:application
