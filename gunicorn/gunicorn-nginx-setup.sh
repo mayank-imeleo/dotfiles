@@ -23,6 +23,9 @@ sudo touch /var/log/nginx/error.log
 sudo chown ubuntu:www-data /var/log/nginx
 sudo chown ubuntu:www-data /var/log/nginx/*.log -R
 
+echo "Setting /var/www/html/"
+sudo mkdir -p /var/www/html/
+sudo chown ubuntu:www-data /var/www/ -R
 
 echo "Configuring nginx"
 sudo rm /etc/nginx/sites-enabled/default -f
