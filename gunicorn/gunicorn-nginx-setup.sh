@@ -2,6 +2,11 @@
 
 set -eu
 
+source .env
+load-dotenv
+
+NGINX_SERVER_NAMES=${NGINX_SERVER_NAMES//,/ }
+export NGINX_SERVER_NAMES
 
 echo "Setting Up gunicorn log files"
 sudo mkdir -p /var/log/gunicorn/
@@ -30,6 +35,7 @@ sudo chown ubuntu:www-data /var/www/ -R
 echo "Configuring nginx"
 sudo rm /etc/nginx/sites-enabled/default -f
 sudo cp "$PWD"/gunicorn/gunicorn.nginx /etc/nginx/sites-enabled/
+envsubst < "$PWD"/gunicorn/gunicorn.nginx  | sudo tee /etc/nginx/sites-enabled/gunicorn.nginx
 
 echo "Configuring system daemons"
 "$PWD"/gunicorn/systemd-reload.sh
