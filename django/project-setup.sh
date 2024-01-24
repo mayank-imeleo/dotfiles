@@ -14,7 +14,7 @@ virtualenv venv -p "$PYTHON_EXECUTABLE" --clear
 source venv/bin/activate
 
 echo "installing python requirements"
-pip install  git+ssh://git@gitlab.com/mayankm2089/pyutils --force-reinstall
+pip install  git+ssh://git@github.com/mayank-imeleo/pyutils --force-reinstall
 pip install -r "requirements/local.txt"
 pip install -r "requirements/production.txt"
 
