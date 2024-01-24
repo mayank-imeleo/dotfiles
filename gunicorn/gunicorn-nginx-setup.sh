@@ -7,6 +7,7 @@ load-dotenv
 
 NGINX_SERVER_NAMES=${NGINX_SERVER_NAMES//,/ }
 export NGINX_SERVER_NAMES
+export NGINX_PROXY_READ_TIMEOUT
 
 echo "Setting Up gunicorn log files"
 sudo mkdir -p /var/log/gunicorn/
