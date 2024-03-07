@@ -1,0 +1,22 @@
+
+# CELERY DAEMON
+
+# /etc/default/celeryd
+# https://docs.celeryq.dev/en/stable/userguide/daemonizing.html
+
+CELERYD_NODES="worker1"
+CELERY_BIN="/home/ubuntu/gunicorn-project/celery"
+
+CELERY_APP="django_celery"
+
+CELERYD_CHDIR="/home/ubuntu/gunicorn-project"
+
+CELERYD_LOG_LEVEL="INFO"
+
+CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
+CELERYD_PID_FILE="/var/run/celery/%n.pid"
+
+CELERYD_USER="ubuntu"
+CELERYD_GROUP="www-data"
+
+CELERY_CREATE_DIRS=1

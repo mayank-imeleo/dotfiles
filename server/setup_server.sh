@@ -36,6 +36,9 @@ echo "installing virtualenv"
 sudo apt install python3-pip -y
 pip3 install virtualenv
 
+# ==================================================================
+# CELERY
+sudo apt-get install rabbitmq-server -y
 
 # ==================================================================
 # NGINX

@@ -2,6 +2,8 @@
 
 set -eu
 
+sudo chown ubuntu:www-data /run/gunicorn.sock
+
 sudo systemctl daemon-reload
 
 echo "Restart gunicorn related system services"
