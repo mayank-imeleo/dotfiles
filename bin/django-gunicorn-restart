@@ -2,6 +2,7 @@
 
 set -eu
 
+sudo chown ubuntu:www-data /run
 sudo chown ubuntu:www-data /run/gunicorn.sock
 
 sudo systemctl daemon-reload
