@@ -101,6 +101,8 @@ export GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 # NGINX
 # change this to your domain name. Eg: abc.com
 export NGINX_SERVER_NAME="localhost"
+alias nginx-restart="sudo systemctl restart nginx.service"
+alias nginx-status="sudo systemctl restart nginx.service"
 
 # ------------------------------------------------------------------
 # POSTGRES

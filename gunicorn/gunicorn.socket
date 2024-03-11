@@ -4,7 +4,7 @@ Description=gunicorn socket
 [Socket]
 SocketUser=www-data
 SocketGroup=www-data
-ListenStream=/run/gunicorn.sock
+ListenStream=/run/gunicorn/gunicorn.sock
 
 [Install]
 WantedBy=sockets.target

@@ -2,8 +2,16 @@
 
 set -eu
 
-sudo chown ubuntu:www-data /run
-sudo chown ubuntu:www-data /run/gunicorn.sock
+sudo mkdir /run/gunicorn -p
+sudo chown ubuntu:www-data /run/gunicorn
+
+SOCKET_FILE="/run/gunicorn/gunicorn.sock"
+
+if [ -f $SOCKET_FILE ]
+then
+  sudo chown ubuntu:www-data  $SOCKET_FILE
+fi
+
 
 sudo systemctl daemon-reload
 

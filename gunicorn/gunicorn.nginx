@@ -21,7 +21,7 @@ server {
         include proxy_params;
         proxy_read_timeout $NGINX_PROXY_READ_TIMEOUT;
         proxy_connect_timeout 75s;
-        proxy_pass http://unix:/run/gunicorn.sock;
+        proxy_pass http://unix:/run/gunicorn/gunicorn.sock;
     }
 
     client_max_body_size 100M;
