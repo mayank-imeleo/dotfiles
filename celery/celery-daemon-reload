@@ -13,10 +13,16 @@ sudo cp "$PWD"/celery/celerybeat.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
 
+echo "enable celery worker"
 sudo systemctl enable celeryworker.service
+
+echo "enable celery beat"
 sudo systemctl enable celerybeat.service
 
+echo "start celery worker"
 sudo systemctl start celeryworker.service
+
+echo "start celery beat"
 sudo systemctl start celerybeat.service
 
 
