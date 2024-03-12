@@ -8,9 +8,13 @@ SESSION_NAME="django"
 echo "Starting Byobu session: $SESSION_NAME"
 byobu new-session -d -s "$SESSION_NAME"
 
+# Nginx Access Log
+echo "Creating Nginx Access Log Window"
+byobu new-window -t "$SESSION_NAME" -n "ngnx-ac-lg" \
+  "sudo multitail /var/log/nginx/access.log -f"
 
-# Nginx
-echo "Creating Nginx Window"
+# Nginx Error Log
+echo "Creating Nginx Error Log Window"
 byobu new-window -t "$SESSION_NAME" -n "ngnx-er-lg" \
   "sudo multitail /var/log/nginx/error.log -f"
 
