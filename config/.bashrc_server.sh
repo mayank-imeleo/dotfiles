@@ -34,7 +34,7 @@ alias jl="j --s | fzf"
 # ------------------------------------------------------------------
 # Starship
 function banner(){
-    figlet "WELCOME"|lolcat
+    figlet "$FIGLET_BANNER"|lolcat
 }
 starship_precmd_user_func="banner"
 eval "$(starship init bash)"
@@ -67,6 +67,12 @@ alias bashrc_edit="vim ~/.bashrc"
 
 # open a random file in vim
 alias tvim="mktemp | vim -"
+
+# ------------------------------------------------------------------
+# CELERY
+
+alias celeryworker-daemon-reload="sudo systemctl daemon-reload && sudo systemctl restart celeryworker"
+alias celerybeat-daemon-reload="sudo systemctl daemon-reload && sudo systemctl restart celerybeat"
 
 # ------------------------------------------------------------------
 # GIT
