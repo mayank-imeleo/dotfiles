@@ -46,7 +46,7 @@ byobu new-window -t "$SESSION_NAME" -n "clry-bt" \
 # Django
 echo "creating gunicorn directory window"
 byobu new-window -t "$SESSION_NAME" -n "gncrn" -c "$HOME/gunicorn-project/" \
-  "source venv/bin/activate"
+  "source $HOME/gunicorn-project/venv/bin/activate"
 
 # Dotfiles
 echo "creating dotfiles directory window"
