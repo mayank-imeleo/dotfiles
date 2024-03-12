@@ -36,12 +36,12 @@ byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
 # Django
 echo "Creating Django Window"
 byobu new-window -t "$SESSION_NAME" -n "djg" \
-  "cd $GUNICORN_PROJECT_DIR && ls -la"
+  "cd $HOME/gunicorn-project"
 
 # Dotfiles
 echo "Creating Dotfiles Window"
 byobu new-window -t "$SESSION_NAME" -n "dtfls" \
-  "cd $HOME/dotfiles && ls -la"
+  "cd $HOME/dotfiles/"
 
 echo "Byobu session $SESSION_NAME successfully started"
 
