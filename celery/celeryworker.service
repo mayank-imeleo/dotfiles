@@ -8,7 +8,7 @@ User=celery
 Group=celery
 Restart=always
 WorkingDirectory=/opt/celery
-EnvironmentFile=/etc/conf.d/celery
+EnvironmentFile=/etc/conf.d/celery.conf
 ExecStart=/home/ubuntu/.local/bin/celery-start-worker
 
 [Install]
