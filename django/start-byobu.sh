@@ -33,6 +33,15 @@ echo "Creating Celery Window"
 byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
   "sudo multitail /var/log/celery/worker1.log /var/log/celery/beat.log -f"
 
+# Django
+echo "Creating Django Window"
+byobu new-window -t "$SESSION_NAME" -n "djg" \
+  "cd $GUNICORN_PROJECT_DIR && ls -la"
+
+# Dotfiles
+echo "Creating Dotfiles Window"
+byobu new-window -t "$SESSION_NAME" -n "dtfls" \
+  "cd $HOME/dotfiles && ls -la"
 
 echo "Byobu session $SESSION_NAME successfully started"
 
