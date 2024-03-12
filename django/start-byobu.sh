@@ -10,32 +10,32 @@ byobu new-session -d -s "$SESSION_NAME"
 
 # Nginx Access Log
 echo "creating nginx access log window"
-byobu new-window -t "$SESSION_NAME" -n "ngnx-ac-lg" \
+byobu new-window -t "$SESSION_NAME" -n "ngnx-ac" \
   "sudo multitail /var/log/nginx/access.log -f"
 
 # Nginx Error Log
 echo "creating nginx error log window"
-byobu new-window -t "$SESSION_NAME" -n "ngnx-er-lg" \
+byobu new-window -t "$SESSION_NAME" -n "ngnx-er" \
   "sudo multitail /var/log/nginx/error.log -f"
 
 # Gunicorn Error Log
 echo "creating gunicorn window"
-byobu new-window -t "$SESSION_NAME" -n "gncrn-er-lg" \
+byobu new-window -t "$SESSION_NAME" -n "gncrn-er" \
   "sudo multitail /var/log/gunicorn/error.log -f"
 
 # Gunicorn JournalCtl
 echo "creating gunicorn journalctl window"
-byobu new-window -t "$SESSION_NAME" -n "gncrn-jrnctl-lg" \
+byobu new-window -t "$SESSION_NAME" -n "gncrn-jrnctl" \
   "sudo journalctl -u gunicorn -f"
 
 # Celery Worker Log
 echo "creating celery worker log window"
-byobu new-window -t "$SESSION_NAME" -n "clry-wrkr-lg" \
+byobu new-window -t "$SESSION_NAME" -n "clry-wrkr" \
   "sudo tail /var/log/celery/worker1.log -f"
 
 # Celery Beat Log
 echo "creating celery beat log window"
-byobu new-window -t "$SESSION_NAME" -n "clry-bt-lg" \
+byobu new-window -t "$SESSION_NAME" -n "clry-bt" \
   "sudo tail /var/log/celery/beat.log -f"
 
 # Django
