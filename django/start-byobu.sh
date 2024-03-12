@@ -8,6 +8,11 @@ SESSION_NAME="django"
 echo "Starting Byobu session: $SESSION_NAME"
 byobu new-session -d -s "$SESSION_NAME"
 
+# Glances
+echo "creating glances window"
+byobu new-window -t "$SESSION_NAME" -n "glncs" \
+  "glances"
+
 # Nginx Access Log
 echo "creating nginx access log window"
 byobu new-window -t "$SESSION_NAME" -n "ngnx-ac" \
