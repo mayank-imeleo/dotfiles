@@ -57,4 +57,9 @@ echo "Byobu session $SESSION_NAME successfully started"
 
 echo "Attaching to Byobu session $SESSION_NAME"
 byobu attach -t django
+
+# clean the status bar
 byobu-quiet
+
+# kill the default window
+byobu kill-window -t 0
