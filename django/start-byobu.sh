@@ -28,10 +28,15 @@ echo "creating gunicorn journalctl window"
 byobu new-window -t "$SESSION_NAME" -n "gncrn-jrnctl-lg" \
   "sudo journalctl -u gunicorn -f"
 
-# Celery
-echo "creating celery window"
-byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
-  "sudo multitail /var/log/celery/worker1.log /var/log/celery/beat.log -f"
+# Celery Worker Log
+echo "creating celery worker log window"
+byobu new-window -t "$SESSION_NAME" -n "clry-wrkr-lg" \
+  "sudo tail /var/log/celery/worker1.log -f"
+
+# Celery Beat Log
+echo "creating celery beat log window"
+byobu new-window -t "$SESSION_NAME" -n "clry-bt-lg" \
+  "sudo tail /var/log/celery/beat.log -f"
 
 # Django
 echo "creating gunicorn directory window"
