@@ -4,8 +4,8 @@ set -eu
 
 # Setup the environment for celery daemon
 
-sudo addgroup celery
-sudo useradd -g celery celery
+sudo groupadd celery -f
+sudo useradd -g celery celery || echo "User celery already exists"
 
 echo "Creating dir /etc/conf.d"
 sudo mkdir "/etc/conf.d" -p
