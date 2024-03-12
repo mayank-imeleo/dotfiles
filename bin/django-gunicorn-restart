@@ -2,8 +2,8 @@
 
 set -eu
 
-gunicorn-daemon-setup
-celery-daemon-setup
+"$PWD"/gunicorn/gunicorn-daemon-setup
+"$PWD"/celery/celery-daemon-setup
 
 echo "Reload service files"
 sudo systemctl daemon-reload

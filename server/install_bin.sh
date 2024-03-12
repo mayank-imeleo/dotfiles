@@ -4,4 +4,5 @@ echo "Installing local binary utilities"
 
 mkdir ~/.local/bin -p
 
-cp bin/* "$HOME"/.local/bin/ -v
+echo "create symbolic links from ~/.local/bin to ./bin"
+ln -sf  "$PWD"/bin/* "$HOME"/.local/bin
