@@ -41,8 +41,11 @@ byobu new-window -t "$SESSION_NAME" -n "gncrn" -c "$HOME/gunicorn-project/"
 echo "creating dotfiles directory window"
 byobu new-window -t "$SESSION_NAME" -n "dtfls" -c "$HOME/dotfiles/"
 
+echo "Remove items from status bar"
+byobu-quiet
+
 echo "Byobu session $SESSION_NAME successfully started"
 
-echo "Attaching to Byobu session $SESSION_NAME"
 
+echo "Attaching to Byobu session $SESSION_NAME"
 byobu attach -t django
