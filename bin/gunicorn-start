@@ -6,7 +6,7 @@ set -eu
 
 GUNICORN_PROJECT_DIR="/home/ubuntu/gunicorn-project"
 
-gunicorn-daemon-setup
+#gunicorn-daemon-setup
 
 /home/ubuntu/gunicorn-project/venv/bin/gunicorn \
   --user ubuntu \
