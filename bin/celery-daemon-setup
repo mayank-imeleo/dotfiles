@@ -14,3 +14,5 @@ sudo cp "$GUNICORN_PROJECT_DIR"/celery/celery.conf /etc/conf.d/celery.conf
 
 sudo chown -R celery:celery /var/log/celery/
 sudo chown -R celery:celery /var/run/celery/
+
+echo " celery daemon setup complete."
