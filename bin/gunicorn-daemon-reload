@@ -1,0 +1,7 @@
+#!/bin/bash
+
+gunicorn-deamon-setup
+
+echo "Reload Gunicorn system daemons"
+sudo cp "$PWD"/gunicorn/gunicorn.socket /etc/systemd/system/
+sudo cp "$PWD"/gunicorn/gunicorn.service /etc/systemd/system/
