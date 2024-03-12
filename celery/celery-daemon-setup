@@ -14,7 +14,7 @@ sudo mkdir "/etc/conf.d" -p
 sudo mkdir "/var/log/celery" -p
 sudo mkdir "/var/run/celery" -p
 
-sudo cp "$PWD"/celery/celery.conf /etc/conf.d/celery.conf
+sudo cp "$DOTFILES_DIR"/celery/celery.conf /etc/conf.d/celery.conf
 
 sudo chown -R ubuntu:www-data /var/log/celery/
 sudo chown -R ubuntu:www-data /var/run/celery/
