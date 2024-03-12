@@ -11,8 +11,6 @@ alias ls="ls --color=always"
 # less
 alias less="less -R"
 
-#git
-export GIT_EDITOR=vim
 
 #HSTR
 alias hh=hstr
@@ -78,9 +76,13 @@ alias gl="git log --oneline --graph --decorate"
 
 alias gs="git status"
 
+alias gpl="git pull"
+alias gph="git push"
+
+export GIT_EDITOR=vim
 # PYTHON ------------------------------------------------------------
 
-alias p="python"
+#alias p="python"
 alias va="source venv/bin/activate"
 alias da="deactivate"
 
