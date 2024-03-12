@@ -75,6 +75,10 @@ alias celeryworker-daemon-reload="sudo systemctl daemon-reload && sudo systemctl
 alias celerybeat-daemon-reload="sudo systemctl daemon-reload && sudo systemctl restart celerybeat"
 
 # ------------------------------------------------------------------
+# Environment Variables
+export DOTFILES_DIR="$HOME/dotfiles"
+
+# ------------------------------------------------------------------
 # GIT
 
 # run gl --all to view graph of all branches
@@ -91,8 +95,6 @@ export GIT_EDITOR=vim
 #alias p="python"
 alias va="source venv/bin/activate"
 alias da="deactivate"
-
-# Environment Variables----------------------------------------------
 
 # GENERAL
 export APP_GIT_REPO_SSH_URL=""
