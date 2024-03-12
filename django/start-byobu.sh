@@ -18,7 +18,7 @@ echo "Creating Nginx Error Log Window"
 byobu new-window -t "$SESSION_NAME" -n "ngnx-er-lg" \
   "sudo multitail /var/log/nginx/error.log -f"
 
-# Gunicorn
+# Gunicorn Error Log
 echo "Creating Gunicorn Window"
 byobu new-window -t "$SESSION_NAME" -n "gncrn-er-lg" \
   "sudo multitail /var/log/gunicorn/error.log -f"
