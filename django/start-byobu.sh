@@ -28,15 +28,15 @@ echo "Creating Gunicorn JournalCtl Window"
 byobu new-window -t "$SESSION_NAME" -n "gncrn-jrnctl-lg" \
   "sudo journalctl -u gunicorn -f"
 
-# Celery
-echo "Creating Celery Window"
-byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
-  "sudo multitail /var/log/celery/worker1.log /var/log/celery/beat.log -f"
+## Celery
+#echo "Creating Celery Window"
+#byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
+#  "sudo multitail /var/log/celery/worker1.log /var/log/celery/beat.log -f"
 
 # Django
 echo "Creating Django Window"
 byobu new-window -t "$SESSION_NAME" -n "djg" \
-  "cd $HOME/gunicorn-project"
+  "cd $HOME/gunicorn-project/"
 
 # Dotfiles
 echo "Creating Dotfiles Window"
