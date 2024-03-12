@@ -43,10 +43,11 @@ echo "creating celery beat log window"
 byobu new-window -t "$SESSION_NAME" -n "clry-bt" \
   "sudo tail /var/log/celery/beat.log -f"
 
-# Django
+# Gunicorn Project
 echo "creating gunicorn directory window"
 byobu new-window -t "$SESSION_NAME" -n "gncrn" -c "$HOME/gunicorn-project/"
-byobu send-keys -t "$SESSION_NAME:gncrn" "source venv/bin/activate"
+byobu send-keys -t "$SESSION_NAME:gncrn" "source venv/bin/activate" Enter
+
 
 # Dotfiles
 echo "creating dotfiles directory window"
