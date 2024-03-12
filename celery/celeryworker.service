@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=forking
-User=celery
-Group=celery
+User=ubuntu
+Group=www-data
 Restart=always
 WorkingDirectory=/home/ubuntu/gunicorn-project
 EnvironmentFile=/etc/conf.d/celery.conf
