@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubnutu
+User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/gunicorn-project
 EnvironmentFile=/etc/conf.d/celery.conf
