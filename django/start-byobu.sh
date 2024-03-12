@@ -45,4 +45,6 @@ byobu new-window -t "$SESSION_NAME" -n "dtfls" \
 
 echo "Byobu session $SESSION_NAME successfully started"
 
-echo "Attach to the session with: byobu attach -t $SESSION_NAME"
+echo "Attaching to Byobu session $SESSION_NAME"
+
+byobu attach -t django
