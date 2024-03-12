@@ -4,6 +4,8 @@ set -eu
 
 # Setup the environment for celery daemon
 
+echo "Start celery daemon setup"
+
 sudo groupadd www-data -f
 sudo useradd -g www-data ubuntu || echo "User ubuntu already exists"
 

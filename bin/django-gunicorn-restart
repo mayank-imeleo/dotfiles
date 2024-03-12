@@ -3,14 +3,25 @@
 set -eu
 
 gunicorn-daemon-setup
+celery-daemon-setup
 
+echo "Reload service files"
 sudo systemctl daemon-reload
 
-echo "Restart gunicorn related system services"
+echo "Restart gunicorn socket"
 sudo systemctl restart gunicorn.socket
+
+echo "Restart gunicorn service"
 sudo systemctl restart gunicorn.service
+
+echo "Restart postgres service"
 sudo systemctl restart postgresql.service
+
+echo "Restart nginx service"
 sudo systemctl restart nginx.service
 
+echo "Restart celery worker"
 sudo systemctl restart celeryworker.service
+
+echo "Restart celery beat"
 sudo systemctl restart celerybeat.service

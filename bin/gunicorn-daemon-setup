@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -eu
+
+echo "Start gunicorn daemon setup"
+
 sudo adduser ubuntu www-data
 sudo adduser www-data ubuntu
 
@@ -12,3 +16,5 @@ if [ -f $SOCKET_FILE ]
 then
   sudo chown ubuntu:www-data  $SOCKET_FILE
 fi
+
+echo "Gunicorn daemon setup complete"
