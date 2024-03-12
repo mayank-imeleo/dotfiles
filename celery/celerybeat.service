@@ -6,10 +6,12 @@ After=network.target
 Type=simple
 User=celery
 Group=celery
-EnvironmentFile=/etc/conf.d/celery
-WorkingDirectory=/opt/celery
+WorkingDirectory=/home/ubuntu/gunicorn-project
+EnvironmentFile=/etc/conf.d/celery.conf
+ExecStart=/bin/sh -c '${CELERY_BIN} -A ${CELERY_APP} beat  \
+    --pidfile=${CELERYBEAT_PID_FILE} \
+    --logfile=${CELERYBEAT_LOG_FILE} --loglevel=${CELERYD_LOG_LEVEL}'
 Restart=always
-ExecStart=/home/ubuntu/.local/bin/celery-start-beat
 
 [Install]
 WantedBy=multi-user.target
