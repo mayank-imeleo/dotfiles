@@ -4,6 +4,8 @@ set -eu
 
 # Set up celery daemon service
 
+"$PWD"/celery/celery-daemon-setup
+
 echo "Setting up celery daemon service"
 
 sudo cp "$PWD"/celery/celeryworker.service /etc/systemd/system/
