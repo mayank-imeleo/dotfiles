@@ -35,13 +35,11 @@ byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
 
 # Django
 echo "Creating Django Window"
-byobu new-window -t "$SESSION_NAME" -n "djg" \
-  "cd /home/ubuntu/gunicorn-project && source venv/bin/activate"
+byobu new-window -t "$SESSION_NAME" -n "djg" -c "$HOME/gunicorn-project/"
 
 # Dotfiles
 echo "Creating Dotfiles Window"
-byobu new-window -t "$SESSION_NAME" -n "dtfls" \
-  "cd /home/ubuntu/dotfiles && ls -la"
+byobu new-window -t "$SESSION_NAME" -n "dtfls" -c "$HOME/dotfiles/"
 
 echo "Byobu session $SESSION_NAME successfully started"
 
