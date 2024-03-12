@@ -28,20 +28,20 @@ echo "Creating Gunicorn JournalCtl Window"
 byobu new-window -t "$SESSION_NAME" -n "gncrn-jrnctl-lg" \
   "sudo journalctl -u gunicorn -f"
 
-## Celery
-#echo "Creating Celery Window"
-#byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
-#  "sudo multitail /var/log/celery/worker1.log /var/log/celery/beat.log -f"
+# Celery
+echo "Creating Celery Window"
+byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
+  "sudo multitail /var/log/celery/worker1.log /var/log/celery/beat.log -f"
 
 # Django
 echo "Creating Django Window"
 byobu new-window -t "$SESSION_NAME" -n "djg" \
-  "cd $HOME/gunicorn-project/"
+  "cd /home/ubuntu/gunicorn-project && source venv/bin/activate"
 
 # Dotfiles
 echo "Creating Dotfiles Window"
 byobu new-window -t "$SESSION_NAME" -n "dtfls" \
-  "cd $HOME/dotfiles/"
+  "cd /home/ubuntu/dotfiles && ls -la"
 
 echo "Byobu session $SESSION_NAME successfully started"
 
