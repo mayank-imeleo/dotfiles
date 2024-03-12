@@ -1,0 +1,15 @@
+[Unit]
+Description=Celery Beat Service Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=celery
+Group=celery
+EnvironmentFile=/etc/conf.d/celery
+WorkingDirectory=/opt/celery
+Restart=always
+ExecStart=/home/ubuntu/.local/bin/celery-start-beat
+
+[Install]
+WantedBy=multi-user.target

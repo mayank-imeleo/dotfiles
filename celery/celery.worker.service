@@ -1,0 +1,15 @@
+[Unit]
+Description=Celery Worker Service Daemon
+After=network.target
+
+[Service]
+Type=forking
+User=celery
+Group=celery
+Restart=always
+WorkingDirectory=/opt/celery
+EnvironmentFile=/etc/conf.d/celery
+ExecStart=/home/ubuntu/.local/bin/celery-start-worker
+
+[Install]
+WantedBy=multi-user.target

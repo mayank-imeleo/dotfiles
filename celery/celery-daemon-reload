@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -eu
+
+# Set up celery daemon service
+
+echo "Setting up celery daemon service"
+
+sudo cp "$PWD"/celery/celery.worker.service /etc/systemd/system/
+sudo cp "$PWD"/celery/celery.beat.service /etc/systemd/system/
+
+systemctl daemon-reload
+
+systemctl enable celery.worker.service
+systemctl enable celery.beat.service
+

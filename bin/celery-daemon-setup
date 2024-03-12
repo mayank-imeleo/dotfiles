@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -eu
+
+# Setup the environment for celery daemon
+
+sudo addgroup celery
+sudo useradd -g celery celery
+
+echo "Creating dir /etc/conf.d"
+sudo mkdir "/etc/conf.d" -p
+
+sudo cp "$GUNICORN_PROJECCT_DIR"/celery/celery.conf /etc/conf.d/celery.conf
+
+sudo chown -R celery:celery /var/log/celery/
+sudo chown -R celery:celery /var/run/celery/

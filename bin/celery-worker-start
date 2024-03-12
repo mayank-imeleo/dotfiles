@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eu
+# Start celery worker
+
+cd "$GUNICORN_PROJECT_DIR"
+
+celery -A config.celery worker --loglevel=INFO
