@@ -112,6 +112,14 @@ alias nginx-status="sudo systemctl restart nginx.service"
 export PG_VERSION="12"
 export PG_ALLOWED_IP_ADDRESS=""
 
+# ------------------------------------------------------------------
+# Journalctl
+alias journalctl-gunicorn="sudo journalctl -u gunicorn -f"
+alias journalctl-gunicorn-socket="sudo journalctl -u gunicorn.socket -f"
+alias journalctl-nginx="sudo journalctl -u nginx -f"
+alias journalctl-celeryworker="sudo journalctl -u celeryworker -f"
+alias journalctl-celerybeat="sudo journalctl -u celerybeat -f"
+
 # Path --------------------------------------------------------------
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
