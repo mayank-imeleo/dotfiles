@@ -35,7 +35,7 @@ byobu new-window -t "$SESSION_NAME" -n "clry-lg" \
 
 # Django
 echo "creating gunicorn directory window"
-byobu new-window -t "$SESSION_NAME" -n "djg" -c "$HOME/gunicorn-project/"
+byobu new-window -t "$SESSION_NAME" -n "gncrn" -c "$HOME/gunicorn-project/"
 
 # Dotfiles
 echo "creating dotfiles directory window"
